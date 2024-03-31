@@ -27,7 +27,7 @@ body {
     background-image: url("IMG/HEADERLANDSCAPE.jpg");
     background-position: center;
     background-size: cover;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -39,7 +39,6 @@ body {
     width: 80%;
     color: #ffffff;
     padding: 15px;
-    margin: 15px;
     text-align: center;
 }
 
@@ -79,7 +78,8 @@ body {
     flex-direction: wrap;
     flex-wrap: wrap;
     justify-content: space-around;
-
+    align-items: center;
+    margin: 15px
 }
 
 .card {
@@ -261,13 +261,16 @@ body {
 
 .Galeria-conteiner {
     display: grid;
+    max-width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 30px;
     margin: 15px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
     z-index: 3;
+
 }
 
 .Box img {
