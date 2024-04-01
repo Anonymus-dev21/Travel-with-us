@@ -24,7 +24,7 @@ body {
 }
 
 .titulo-principal-conteiner {
-    background-image: url("IMG/HEADERLANDSCAPE.jpg");
+    background-image: url("../IMG/HEADERLANDSCAPE.jpg");
     background-position: center;
     background-size: cover;
     max-width: 100%;
@@ -216,7 +216,7 @@ body {
     }
 
     .left {
-        height: max-content;
+        height: 100%;
     }
 
 
@@ -352,7 +352,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(IMG/Fondo\ de\ registe.jpg);
+    background-image: url(../IMG/Fondo\ de\ registe.jpg);
     background-size: cover;
     background-position: center;
 
@@ -431,7 +431,7 @@ body {
 
 .check-forgot input {
     margin: 0 7px 1px;
-    accent-color: #b4f010;
+    accent-color: #ffc3ed;
 }
 
 .check-forgot a {
@@ -557,9 +557,6 @@ body {
     height: 100%;
 }
 
-.imgpresentation img {
-    padding: 35px;
-}
 
 @media only screen and (max-width:964px) {
     .presentacioncontent h1 {
@@ -778,33 +775,39 @@ body {
     color: #000000;
     text-decoration: underline;
 }
+
 /* ====== FORMATO GENERAL DE LA INFO======== */
 .conteiner__info {
     color: rgb(0, 0, 0);
     background-color: rgb(248, 249, 255);
-    padding: 30px  !important;
+    padding: 30px !important;
 }
 
-.info__content p, li{
+.info__content p,
+li {
     font-size: 17px;
     line-height: 30px;
     letter-spacing: .5px;
 }
-.info__content h2{
-font-size: 40px;
-letter-spacing: 3px;
-padding: 0 0 10px; 
-font-weight: 700;
+
+.info__content h2 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    padding: 0 0 10px;
+    font-weight: 700;
 }
-.info__content h3{
+
+.info__content h3 {
     letter-spacing: 1px;
-    padding: 10px 0; 
+    padding: 10px 0;
 }
-.glosario-titulo{
+
+.glosario-titulo {
     width: 100%;
     justify-content: center;
 }
-.glosario-titulo h1{
+
+.glosario-titulo h1 {
     font-size: 50px;
     font-weight: 700;
     text-align: center;
@@ -812,158 +815,177 @@ font-weight: 700;
     text-decoration: underline;
     margin: 10px;
 }
-.advertencia h4{
+
+.advertencia h4 {
     font-size: 34px;
     padding: 10px;
     text-align: center;
     text-decoration: underline;
 }
+
 .ultima-advertencia p {
     text-align: center;
 }
 
-.info__paises{
+.info__paises {
     margin: 30px 0;
 }
+
 /* ========FORMATO GENERAL DE LA INFO FINNNNNNN======== */
 
 
 /* ===============CANADA================ */
-.primera--imagen{
+.primera--imagen {
     width: 250px;
     float: right;
     margin: 25px;
     padding-top: 50px 25px;
 }
+
 /* ==========CANADA IMAGEN================== */
 
 
 /*=========IMAGENES DEL FINAL=======*/
-.last__img__conteiner{
+.last__img__conteiner {
     display: grid;
     max-width: 800px;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 350px);
     gap: 10px;
 }
-.imagenes__final img{
+
+.imagenes__final img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
 }
-.imagenes__final--2{
+
+.imagenes__final--2 {
     grid-column: 1/span 2;
     grid-row: 2/2;
 }
+
 /*========= FINN DEE IMAGENES DEL FINAL=======*/
 
-@media only screen and (max-width:706px){
-    .primera--imagen{
+@media only screen and (max-width:706px) {
+    .primera--imagen {
         display: flex;
-        float:none;
+        float: none;
         margin: auto;
         padding: 10px;
     }
 }
 
 @media only screen and (max-width:580px) {
+
     /* ===ASIDEE=== */
     .aside__indice {
         display: none;
     }
-    .open__menu-boton-indice{
+
+    .open__menu-boton-indice {
         display: block;
     }
-     .menu__checbox:checked ~ .aside__indice{
+
+    .menu__checbox:checked~.aside__indice {
         display: flex;
         width: 100%;
         height: 100%;
-     }
-      /* ===ASIDEE FIN=== */
+    }
+
+    /* ===ASIDEE FIN=== */
     /* ====IMAGENES DEL FINAL==== */
-    .last__img__conteiner{
+    .last__img__conteiner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+
     /* ========================= */
     /* ===========RESPONSIVE TEXT CONFIGURATION ================*/
-    .info__content h2{
+    .info__content h2 {
         font-size: 30px;
         letter-spacing: 3px;
-        padding: 0 0 10px; 
+        padding: 0 0 10px;
         font-weight: 700;
-        }
-        .info__content h3{
-            letter-spacing: 1px;
-            padding: 10px 0; 
-        }
-        .info__paises{
-            margin: 10px 0;
-            padding: 0;
-        }
-        .info__content p, li{
-            font-size: 16px;
-            line-height: 30px;
-            letter-spacing:0;
-        }
+    }
+
+    .info__content h3 {
+        letter-spacing: 1px;
+        padding: 10px 0;
+    }
+
+    .info__paises {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .info__content p,
+    li {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
 }
-@media only screen and (max-width: 400px){
-    .glosario-titulo{
+
+@media only screen and (max-width: 400px) {
+    .glosario-titulo {
         text-align: center;
     }
-    .glosario-titulo h1{
-        font-size:35px;
+
+    .glosario-titulo h1 {
+        font-size: 35px;
         font-weight: 800;
         text-wrap: balance;
         letter-spacing: 3px;
     }
 }
-    /* BARRA DE REDES SOCIALEEESSS */
+
+/* BARRA DE REDES SOCIALEEESSS */
 
 
 
-    .contactame {
-        position: relative;
-        z-index: 5;
-        width: 100%;
-        background-color: black;
-        padding: 5px;
-        margin-top: 0;
-        text-align: center;
-        bottom: 0;
+.contactame {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+    margin-top: 0;
+    text-align: center;
+    bottom: 0;
 
-    }
+}
 
-    .contactame p {
-        padding: 20px;
-        margin-bottom: 10px;
-        color: #ffffff;
-        font-size: 20px;
-    }
+.contactame p {
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
 
-    .contactame a {
-        color: rgb(153, 97, 255);
-        font-size: 45px;
-        text-decoration: none;
-        letter-spacing: 20px;
+.contactame a {
+    color: rgb(153, 97, 255);
+    font-size: 45px;
+    text-decoration: none;
+    letter-spacing: 20px;
 
-    }
+}
 
-    .VolverArriba {
-        color: beige;
-        background-color: rgb(159, 107, 255);
-        height: 50px;
-        width: 50px;
-        position: fixed;
-        right: 50px;
-        bottom: 40px;
-        font-size: 40px;
-        text-align: center;
-        line-height: 50px;
-        border-style: double;
-        border-radius: 50%;
-        z-index: 5;
+.VolverArriba {
+    color: beige;
+    background-color: rgb(159, 107, 255);
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    border-style: double;
+    border-radius: 50%;
+    z-index: 5;
 
-    }
+}
