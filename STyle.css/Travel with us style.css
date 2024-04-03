@@ -142,18 +142,18 @@ body {
 
 .card__enlace a {
     display: block;
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
     width: 100%;
     background-color: #000000;
     padding: 12px 20px;
     transition-property: color;
-    transition-duration: .6s;
+    transition-duration: .5s;
 }
 
 .card__enlace a:hover {
-    background-color: #4c4d498c;
-    text-decoration: underline;
+    background-color: #f7f7f7;
+    color: rgb(74, 74, 247);
 }
 
 
@@ -857,6 +857,13 @@ li {
 
 /* ========FORMATO GENERAL DE LA INFO FINNNNNNN======== */
 
+/* ===PRIMERA LETRA==== */
+#first-letter::first-letter{
+    font-size: 70px;
+    font-style:oblique;
+    color: #ffc400;
+    font-weight: 500;
+}
 
 /* ===============CANADA================ */
 .primera--imagen {
