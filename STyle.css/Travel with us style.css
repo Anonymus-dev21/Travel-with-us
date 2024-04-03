@@ -285,10 +285,34 @@ body {
     filter: sepia(50%);
     z-index: 2;
     overflow: hidden;
+    position: relative;
+}
+.Box .overlay{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.39) ;
+    opacity: 0;
+}
+.overlay h2{
+
+    color: white;
+    font-weight:600;
+    margin: 0 10px;
+    
+}
+.Box .overlay:hover{
+ opacity: 100%;
 }
 
-.Box img:hover {
-    filter: sepia(0%);
+.Box:hover img {
+    filter:contrast(110%) sepia(0%) ;
     transform: scale(1.1);
 }
 
@@ -515,7 +539,7 @@ body {
     flex-direction: column;
 }
 
-.fondosobremi {
+.fondosobremi  {
     margin: 0;
     /* position: relative; */
     justify-content: center;
@@ -971,6 +995,20 @@ li {
     text-decoration: none;
     letter-spacing: 20px;
 
+}
+.contactame .twitter:hover{
+    color:white;
+}
+.contactame .facebook:hover{
+    color: #1736e7;
+    
+}
+.contactame .instagram:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    background-clip: text;
+    color:transparent;
+   
 }
 
 .VolverArriba {
