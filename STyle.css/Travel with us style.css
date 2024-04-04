@@ -27,7 +27,8 @@ body {
     background-image: url("../IMG/HEADERLANDSCAPE.jpg");
     background-position: center;
     background-size: cover;
-    max-width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -64,7 +65,6 @@ body {
 .titulo-principal-content p a {
     transition-property: color;
     transition-duration: .7s;
-    text-decoration: none;
     font-weight: 600;
     color: #ffffff
 }
@@ -1008,14 +1008,12 @@ li {
 }
 .contactame .facebook:hover{
     color: #1736e7;
-    
 }
 .contactame .instagram:hover{
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
     color:transparent;
-   
 }
 
 .VolverArriba {
@@ -1032,5 +1030,4 @@ li {
     border-style: double;
     border-radius: 50%;
     z-index: 5;
-
 }
