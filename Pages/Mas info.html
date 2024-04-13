@@ -50,12 +50,34 @@
     <div class="container-fluid">
 
         <div class="row">
-
             <aside class="col-3 col-sm-2 aside">
                 <div class=" aside__contenido text-wrap">
-                    <input type="checkbox" class="menu__checbox" id="open__menu">
+                <button class="btn btn-primary d-block d-sm-none open__menu-boton-indice mt-4 bg-dark" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                        <i class="fa-solid fa-bars fs-1" ></i>
+                    </button>
+                        <div class="offcanvas offcanvas-start d-flex flex-column justify-content-between"
+                        data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                        aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Indice:</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-column justify-content-evenly">
+                                <a href="#canada">Canada</a>
+                                <a href="#australia">Australia</a>
+                                <a href="#noruega">Noruega</a>
+                                <a href="#japon">Japon</a>
+                                <a href="#nueva-zelanda">Nueva zelanda</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <input type="checkbox" class="menu__checbox" id="open__menu">
                     <label for="open__menu" class="open__menu-boton-indice"><i class="fa-solid fa-bars"
-                            role="button"></i></label>
+                            role="button"></i></label> -->
                     <div class="aside__indice">
                         <a href="#canada">Canada</a>
                         <a href="#australia">Australia</a>
@@ -75,7 +97,8 @@
                     <section class="info__paises info__paises--canada" id="canada">
                         <img class="primera--imagen" src="../IMG/CANADATORONTO3.jpg">
                         <h2> Canadá:</h2>
-                        <p id="first-letter">Canadá, un vasto y diverso país en Norteamérica, ofrece una experiencia de viaje única. Aquí
+                        <p id="first-letter">Canadá, un vasto y diverso país en Norteamérica, ofrece una experiencia de
+                            viaje única. Aquí
                             tienes información esencial para planificar tu aventura:</p>
 
                         <h3> Naturaleza: </h3>
