@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(247, 255, 254);
 }
 
 .lista__separadas li {
@@ -96,12 +96,18 @@ body {
   padding: 13px;
   top: 0;
   z-index: 10;
-  animation: header-movement both;
-  animation-timeline: scroll();
+  opacity: 100%;
   background-color: #131516;
-  animation-range: 20% 49%;
 }
 
+@supports (animation-timeline: view()) and (animation-range: 20% 49%) {
+  .navegation {
+    animation: header-movement both;
+    animation-timeline: scroll();
+    background-color: #131516;
+    animation-range: 20% 49%;
+  }
+}
 .titulo-principal-conteiner {
   background-image: url("../IMG/HEADERLANDSCAPE.jpg");
   background-position: center;

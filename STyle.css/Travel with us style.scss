@@ -1,19 +1,19 @@
+@import "Animations";
+@import "Variables";
+@import "Fonts";
 
-@import "Animations" ;
-@import "Variables" ;
-@import "Fonts" ;
-
-@mixin main-title{
+@mixin main-title {
     font-family: "Poppins";
-    font-weight:700;
+    font-weight: 700;
     letter-spacing: 5px;
 }
 
-@mixin secondary-title{
+@mixin secondary-title {
     font-family: "Poppins";
-    font-weight:600;
+    font-weight: 600;
     letter-spacing: 3px;
 }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -25,7 +25,7 @@
     color: white;
 }
 
-p{
+p {
     font-family: "Urbanist";
 }
 
@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $light-mode;
 }
 
 .lista__separadas li {
@@ -42,9 +42,10 @@ body {
     margin: 0 5px;
 }
 
-.logo{
+.logo {
     @include secondary-title;
 }
+
 .logo__propio {
     @include secondary-title;
     color: #f01053;
@@ -56,11 +57,20 @@ body {
     padding: 13px;
     top: 0;
     z-index: 10;
-    animation: header-movement both;
-    animation-timeline: scroll();
+    opacity: 100%;
     background-color: $color-menus;
-    animation-range: 20% 49%;
 }
+
+@supports (animation-timeline: view()) and (animation-range: 20% 49%) {
+    .navegation {
+        animation: header-movement both;
+        animation-timeline: scroll();
+        background-color: $color-menus;
+        animation-range: 20% 49%;
+    }
+
+}
+
 
 
 .titulo-principal-conteiner {
@@ -860,7 +870,7 @@ body {
     top: 0;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .aside__contenido {
