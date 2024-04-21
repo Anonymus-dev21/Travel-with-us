@@ -872,7 +872,7 @@ body {
   position: absolute;
   top: 40px;
   display: none;
-  padding: 10px;
+  padding: 35px;
 }
 
 .menu__checbox {
@@ -885,7 +885,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  padding: 15px;
+  padding: 40px 15px 0;
 }
 .aside__indice a {
   text-wrap: pretty;
