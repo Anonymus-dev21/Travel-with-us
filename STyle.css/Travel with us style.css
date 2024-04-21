@@ -481,16 +481,20 @@ body {
   }
 }
 /* PAGINA DE REGISTRO */
+@supports (animation-timeline: scroll()) and (animation-range: 20% 40%) {
+  .navegation__login {
+    animation: header-movement both;
+    animation-timeline: scroll();
+    animation-range: 20% 40%;
+  }
+}
 .navegation__login {
   position: sticky !important;
   width: 100%;
   padding: 13px;
   top: 0;
   z-index: 10;
-  animation: header-movement both;
-  animation-timeline: scroll();
-  background-color: #1f2122;
-  animation-range: 20% 40%;
+  background-color: #131516;
 }
 
 #top3 {
@@ -635,16 +639,20 @@ body {
   top: 0;
 }
 
+@supports (animation-timeline: scroll()) and (animation-range: 19% 70%) {
+  .navegation__sobre__mi {
+    animation: header-movement both;
+    animation-timeline: scroll();
+    animation-range: 19% 70%;
+  }
+}
 .navegation__sobre__mi {
   position: fixed !important;
   width: 100%;
   padding: 13px;
   top: 0;
   z-index: 10;
-  animation: header-movement both;
-  animation-timeline: scroll();
-  background-color: #1f2122;
-  animation-range: 19% 70%;
+  background-color: #131516;
 }
 
 .presentacion {
@@ -896,15 +904,19 @@ body {
   top: 0;
 }
 
+@supports (animation-timeline: scroll()) and (animation-range: 55px 200px) {
+  .navegation__shorter__animation {
+    animation: header-movement both;
+    animation-timeline: scroll();
+    animation-range: 55px 200px;
+  }
+}
 .navegation__shorter__animation {
   position: sticky !important;
   padding: 13px;
   top: 0;
   z-index: 10;
-  animation: header-movement both;
-  animation-timeline: scroll();
-  background-color: #1f2122;
-  animation-range: 55px 200px;
+  background-color: #131516;
 }
 
 .conteiner__info {
