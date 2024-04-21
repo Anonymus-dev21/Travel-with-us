@@ -1,7 +1,19 @@
+
 @import "Animations" ;
 @import "Variables" ;
 @import "Fonts" ;
 
+@mixin main-title{
+    font-family: "Poppins";
+    font-weight:700;
+    letter-spacing: 5px;
+}
+
+@mixin secondary-title{
+    font-family: "Poppins";
+    font-weight:600;
+    letter-spacing: 3px;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -12,8 +24,9 @@
     background-color: black;
     color: white;
 }
+
 p{
-    font-family: "Poppins";
+    font-family: "Urbanist";
 }
 
 html {
@@ -29,8 +42,11 @@ body {
     margin: 0 5px;
 }
 
-
+.logo{
+    @include secondary-title;
+}
 .logo__propio {
+    @include secondary-title;
     color: #f01053;
     font-size: 20px;
 }
@@ -67,16 +83,14 @@ body {
     text-align: center;
 
     h1 {
-        font-family: "Poppins";
-        font-weight: 600;
+        @include main-title;
         font-size: 65px;
         margin-bottom: 20px;
         letter-spacing: 16px;
     }
 
     h2 {
-        font-family: "Poppins";
-        letter-spacing: 10px;
+        @include main-title;
         font-size: 35px;
         font-weight: 600;
     }
@@ -96,7 +110,7 @@ body {
         }
 
         a:hover {
-            color: rgba(7, 7, 114, 0.699);
+            color: #081b29;
         }
     }
 }
@@ -105,7 +119,7 @@ body {
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 15px
 }
@@ -113,7 +127,7 @@ body {
 .card {
     font-size: 17px;
     margin: 20px 15px;
-    width: 25%;
+    width: 26%;
     text-align: center;
     border-radius: 15px;
     overflow: hidden;
@@ -133,7 +147,7 @@ body {
 
     .card__desc {
         text-align: left;
-        padding: 10px 5px;
+        padding: 5px 10px;
     }
 
     .card__enlace {
@@ -212,9 +226,9 @@ body {
     padding: 25px;
     width: 50%;
     min-height: 30vh;
-    animation: aparecer 1s 3s both;
+    animation: aparecer both;
     animation-timeline: view();
-    animation-range: cover 10% contain 70%;
+    animation-range: cover 5% cover 75%;
 }
 
 .right h3 {
@@ -293,8 +307,7 @@ body {
 }
 
 .titulo-galeria h1 {
-    font-family: "Poppins";
-    font-weight: 600;
+    @include main-title;
     font-size: 45px;
     text-align: center;
     letter-spacing: 5px;
@@ -369,7 +382,6 @@ body {
 
     h2 {
         color: white;
-        font-weight: 600;
         margin: 0 10px;
     }
 }
@@ -479,11 +491,9 @@ body {
     padding: 20px 40px;
 
     h1 {
-        font-family: "Poppins";
-        font-weight: 600;
+        @include main-title;
         font-size: 40px;
         text-align: center;
-        letter-spacing: 3px;
     }
 }
 
@@ -650,10 +660,8 @@ body {
     padding: 0 10%;
 
     h1 {
-        font-family: "Poppins";
-        letter-spacing: 5px;
+        @include main-title;
         font-size: 56px;
-        font-weight: bolder;
     }
 
     h3 {
@@ -733,11 +741,8 @@ body {
     }
 
     h1 {
-        font-family: "Poppins";
-        letter-spacing: 5px;
-        font-weight: 700;
+        @include main-title;
         font-size: 45px;
-        letter-spacing: 4px;
         color: white;
         background-color: black;
         padding: 25px 45px;
@@ -931,10 +936,9 @@ li {
 }
 
 .info__content h2 {
+    @include secondary-title;
     font-size: 40px;
-    letter-spacing: 3px;
     padding: 0 0 10px;
-    font-weight: 700;
 }
 
 .info__content h3 {
@@ -949,7 +953,7 @@ li {
 
 .glosario-titulo h1 {
     font-size: 50px;
-    font-weight: 700;
+    @include main-title;
     text-align: center;
     letter-spacing: 5px;
     text-decoration: underline;
@@ -1052,10 +1056,9 @@ li {
     /* ========================= */
     /* ===========RESPONSIVE TEXT CONFIGURATION ================*/
     .info__content h2 {
+        @include secondary-title;
         font-size: 30px;
-        letter-spacing: 3px;
         padding: 0 0 10px;
-        font-weight: 700;
     }
 
     .info__content h3 {
@@ -1083,7 +1086,6 @@ li {
 
     .glosario-titulo h1 {
         font-size: 35px;
-        font-weight: 800;
         text-wrap: balance;
         letter-spacing: 3px;
     }
