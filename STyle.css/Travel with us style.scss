@@ -634,7 +634,7 @@ body {
 /* PAGINA DE PRESENTACIOOOOOOOOOOOOOOOOOOOOOOONNN */
 #top2 {
     position: absolute;
-    top: 0;
+    top: 0; 
 }
 
 @supports (animation-timeline: scroll()) and (animation-range: 19% 70%) {
@@ -654,28 +654,28 @@ body {
     background-color: $color-menus;
 }
 
-
-.presentacion {
-    display: flex;
-    flex-direction: column;
-}
-
 .fondosobremi {
     margin: 0;
-    /* position: relative; */
+    min-width: 100%;
+    min-height: 100vh;
     justify-content: center;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
     background-color: #081b29;
-
 }
 
+
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
 .presentacioncontent {
-    max-width: 600px;
+    width: 100%;
     color: rgb(255, 255, 255);
     padding: 0 10%;
 
@@ -684,7 +684,7 @@ body {
         font-size: 56px;
     }
 
-    h3 {
+    h2 {
         font-family: "Poppins";
         font-size: 25px;
         color: rgb(0, 247, 255);
@@ -697,12 +697,68 @@ body {
 }
 
 .imgpresentation {
+    display: flex;
     margin: 75px 0 50px 25px;
-    background: transparent;
     max-width: 350px;
     height: 100%;
 }
-
+@media only screen and (min-width:1440px){
+    .fondosobremi{
+        flex-wrap:nowrap;
+        flex: 1
+    }
+    .imgpresentation{
+        display: flex;
+        min-width: 650px;
+        height: 100vh;
+        flex:3;
+        img{
+            object-fit: cover;
+            object-position: center;
+            width:100%;
+            height:100%;
+            margin: auto;
+            padding: 30px;
+            
+        }
+    }
+    .presentacion{
+        display: flex;
+        min-width: 350px;
+        flex:1;
+    }
+    .presentacioncontent{
+        h1{
+            font-size: 80px;
+        }
+        p{
+            font-size: 25px;
+        }
+        h2{
+            font-size: 38px;
+        }
+    }
+}
+@media only screen and (min-width:2000px){
+    .imgpresentation{
+        min-width: 850px;
+        flex:2;
+    }
+    .presentacion{
+        min-width: 550px;
+        .presentacioncontent{
+            h1{
+                font-size: 100px;
+            }
+            p{
+                font-size: 45px;
+            }
+            h2{
+                font-size: 65px;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width:990px) {
     .presentacioncontent {
@@ -741,7 +797,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 .contenido-general-reseña {
@@ -749,8 +804,8 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
-    margin: 30px 0;
+    padding: 5px 0px;
+
 
     span {
         font-family: "Poppins";
@@ -761,7 +816,7 @@ body {
     }
 
     h1 {
-        @include main-title;
+        @include secondary-title;
         font-size: 45px;
         color: white;
         background-color: black;
@@ -776,6 +831,7 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
+    overflow: hidden;
 }
 
 .box-resigns {
@@ -909,7 +965,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    padding: 40px 15px 0 ;
+    padding: 35px 15px 0 ;
 
     a {
         text-wrap: pretty;
