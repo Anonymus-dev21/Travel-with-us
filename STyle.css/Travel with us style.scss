@@ -53,7 +53,7 @@ body {
 }
 
 .navegation {
-    position: sticky !important;
+    position: sticky;
     padding: 13px;
     top: 0;
     z-index: 10;
@@ -149,10 +149,11 @@ body {
     animation-timeline: view();
     animation-range: cover 8% cover 50%;
 
-    .card__title {
+    .card__title h3 {
         font-family: "Poppins";
         font-size: 25px;
         padding: 5px 0;
+        font-weight: 600;
     }
 
     .card__desc {
@@ -223,13 +224,20 @@ body {
 
 .left {
     width: 50%;
-    object-fit: cover;
-    object-fit: center;
+    height: 100%;
     padding: 15px;
     animation: aparecer both;
     animation-timeline: view();
     animation-range: cover 10% contain 60%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-fit: center;
+    }
 }
+
 
 .right {
     font-size: 18px;
@@ -238,7 +246,7 @@ body {
     min-height: 30vh;
     animation: aparecer both;
     animation-timeline: view();
-    animation-range: cover 5% cover 75%;
+    animation-range: cover 5% cover 50%;
 }
 
 .right h3 {
@@ -255,6 +263,100 @@ body {
     text-wrap: pretty;
     text-align: left;
 }
+
+@media only screen and (min-width:1440px) {
+
+    // ============BANNNERR==============
+    .titulo-principal-content {
+        h1 {
+            font-size: 80px;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 28px;
+        }
+    }
+
+    // ============BANNNERR FIN==============
+
+    // ============CARDS==============
+    .card {
+        .card__img__conteiner {
+            height: 500px;
+        }
+
+        .card__title h3 {
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        .card__desc {
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .card__enlace a {
+            padding: 20px 25px;
+            font-size: 20px;
+        }
+    }
+
+    // =============CARDS FIN==============
+    .right p {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width:2000px) {
+
+    // ============BANNNERR==============
+    .titulo-principal-content {
+        h1 {
+            font-size: 90px;
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+
+    // ============BANNNERR FIN==============
+    // ============CARDS==============
+    .card {
+        .card__title h3 {
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        .card__desc {
+            font-size: 35px;
+            font-weight: 500;
+        }
+    }
+
+    // =============CARDS FIN==============
+    .right {
+        h3 {
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+}
+
+
 
 @media only screen and (max-width: 1067px) {
 
@@ -411,6 +513,25 @@ body {
     transform: scale(1.1);
 }
 
+@media only screen and (min-width:1440px) {
+    .titulo-galeria h1 {
+        @include main-title;
+        font-size: 75px;
+        margin-bottom: 16px;
+    }
+
+    .linea {
+        height: 8px;
+    }
+}
+
+@media only screen and (min-width:1900px) {
+    .titulo-galeria h1 {
+        @include main-title;
+        font-size: 100px;
+    }
+}
+
 @media only screen and (max-width:1100px) {
     .Galeria-conteiner {
         display: grid;
@@ -554,7 +675,7 @@ body {
     margin: 15px 0;
 
     input {
-        margin: 0 7px 1px;
+        margin: 0 1px 1px;
         accent-color: #ffc3ed;
     }
 
@@ -597,6 +718,84 @@ body {
     }
 }
 
+@media only screen and (min-width:1440px) {
+    .contenedorregister {
+        form {
+            h1 {
+                font-size: 50px;
+            }
+
+            .input_box {
+                height: 60px;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            input::placeholder {
+                font-size: 20px;
+            }
+
+        }
+
+        .check-forgot input {
+            margin: 0 3px 0;
+        }
+        .check-forgot label{
+            font-size: 20px;
+        }
+
+        .check-forgot a {
+            font-size: 18px;
+        }
+
+        .registrate p {
+            font-size: 18px;
+        }
+
+    }
+}
+
+@media only screen and (min-width:1900px) {
+    .contenedorregister {
+        form {
+            h1 {
+                font-size: 60px;
+            }
+
+            .input_box {
+                height: 65px;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+
+            input::placeholder {
+                font-size: 25px;
+            }
+
+        }
+
+        .check-forgot input {
+            margin: 0 2px 0;
+        }
+        .check-forgot label{
+            font-size: 21px;
+        }
+
+        .check-forgot a {
+            font-size: 21px;
+        }
+
+        .registrate p {
+            font-size: 25px;
+        }
+
+    }
+}
+
 @media only screen and (max-width:560px) {
     .loginpage {
         margin-top: 0;
@@ -634,7 +833,7 @@ body {
 /* PAGINA DE PRESENTACIOOOOOOOOOOOOOOOOOOOOOOONNN */
 #top2 {
     position: absolute;
-    top: 0; 
+    top: 0;
 }
 
 @supports (animation-timeline: scroll()) and (animation-range: 19% 70%) {
@@ -667,13 +866,14 @@ body {
 }
 
 
-.presentacion{
+.presentacion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 600px;
 }
+
 .presentacioncontent {
     width: 100%;
     color: rgb(255, 255, 255);
@@ -702,59 +902,68 @@ body {
     max-width: 350px;
     height: 100%;
 }
-@media only screen and (min-width:1440px){
-    .fondosobremi{
-        flex-wrap:nowrap;
+
+@media only screen and (min-width:1440px) {
+    .fondosobremi {
+        flex-wrap: nowrap;
         flex: 1
     }
-    .imgpresentation{
+
+    .imgpresentation {
         display: flex;
         min-width: 650px;
-        height: 100vh;
-        flex:3;
-        img{
+        height: 100%;
+
+        img {
             object-fit: cover;
             object-position: center;
-            width:100%;
-            height:100%;
-            margin: auto;
-            padding: 30px;
-            
+            width: 100%;
+
+            padding: 60px;
         }
     }
-    .presentacion{
+
+    .presentacion {
         display: flex;
         min-width: 350px;
-        flex:1;
+        flex: 1;
     }
-    .presentacioncontent{
-        h1{
+
+    .presentacioncontent {
+        h1 {
             font-size: 80px;
         }
-        p{
+
+        p {
             font-size: 25px;
         }
-        h2{
+
+        h2 {
             font-size: 38px;
         }
     }
 }
-@media only screen and (min-width:2000px){
-    .imgpresentation{
+
+@media only screen and (min-width:2000px) {
+    .imgpresentation {
         min-width: 850px;
-        flex:2;
+        flex: 2;
     }
-    .presentacion{
+
+    .presentacion {
         min-width: 550px;
-        .presentacioncontent{
-            h1{
+
+        .presentacioncontent {
+            h1 {
                 font-size: 100px;
             }
-            p{
+
+            p {
                 font-size: 45px;
             }
-            h2{
-                font-size: 65px;
+
+            h2 {
+                font-size: 60px;
             }
         }
     }
@@ -804,7 +1013,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    padding: 5px 0px;
+    margin: 10px;
 
 
     span {
@@ -828,7 +1037,7 @@ body {
 .box-resigns-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     overflow: hidden;
@@ -904,6 +1113,93 @@ body {
     text-align: left;
 }
 
+@media only screen and (min-width:1440px) {
+    .contenido-general-reseña {
+        margin: 60px;
+
+        span {
+            font-size: 40px;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+    }
+
+    .main__conteiner {
+        max-width: 95%;
+        margin: auto;
+    }
+
+    .box-resigns-container {
+        margin-bottom: 50px;
+    }
+
+    .box-resigns {
+        min-width: 700px;
+
+        .username {
+            strong {
+                font-size: 25px;
+                padding: 0 7px;
+            }
+
+            span {
+                font-size: 20px;
+                letter-spacing: 3px;
+                padding: 0 10px;
+            }
+        }
+
+        .comentarios {
+            font-size: 26px;
+        }
+    }
+
+    .profile-img {
+        min-width: 80px;
+        min-height: 80px;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .contenido-general-reseña {
+        margin: 90px;
+
+        span {
+            font-size: 60px;
+        }
+
+        h1 {
+            font-size: 95px;
+        }
+    }
+
+    .box-resigns {
+        min-width: 800px;
+
+        .username {
+            strong {
+                font-size: 30px;
+            }
+
+            span {
+                font-size: 25px;
+                letter-spacing: 3px;
+            }
+        }
+
+        .comentarios {
+            font-size: 30px;
+        }
+    }
+
+    .profile-img {
+        min-width: 100px;
+        min-height: 100px;
+    }
+}
+
 @media only screen and (max-width:630px) {
     .box-resigns-container {
         width: 100%;
@@ -965,7 +1261,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    padding: 35px 15px 0 ;
+    padding: 35px 15px 0;
 
     a {
         text-wrap: pretty;
@@ -1231,4 +1527,46 @@ li {
     border-style: double;
     border-radius: 50%;
     z-index: 5;
+}
+
+@media only screen and (min-width:1440px) {
+    .lista__separadas a {
+        font-size: 22px !important;
+    }
+
+    .logo,
+    .logo__propio {
+        font-size: 25px !important;
+    }
+
+    .contactame {
+        p {
+            font-size: 30px;
+        }
+
+        a {
+            font-size: 65px;
+        }
+    }
+}
+
+@media only screen and (min-width:1900px) {
+    .lista__separadas a {
+        font-size: 27px !important;
+    }
+
+    .logo,
+    .logo__propio {
+        font-size: 29px !important;
+    }
+
+    .contactame {
+        p {
+            font-size: 30px;
+        }
+
+        a {
+            font-size: 65px;
+        }
+    }
 }
