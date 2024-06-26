@@ -1169,11 +1169,17 @@ body {
   justify-content: center;
   margin: 10px 0 25px;
 }
+.menu__button .menu {
+  display: block;
+}
 .menu__button i {
   font-size: 30px;
   padding: 10px 15px;
   background-color: rgba(26, 24, 25, 0.24);
   border-radius: 10px;
+}
+.menu__button .x {
+  display: none;
 }
 
 .aside__indice {

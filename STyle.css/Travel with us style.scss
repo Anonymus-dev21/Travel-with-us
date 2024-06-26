@@ -1271,12 +1271,18 @@ body {
     display: none;
     justify-content: center;
     margin: 10px 0 25px;
+    .menu{
+        display: block;
+    }
 
     i {
         font-size: 30px;
         padding: 10px 15px;
         background-color: rgba(26, 24, 25, 0.24);
         border-radius: 10px;
+    }
+    .x{
+        display: none;
     }
 }
 
